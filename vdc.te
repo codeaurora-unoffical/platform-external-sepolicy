@@ -14,7 +14,7 @@ unix_socket_connect(vdc, vold, vold)
 
 # vdc sends information back to dumpstate when "adb bugreport" is used
 allow vdc dumpstate:fd use;
-allow vdc dumpstate:unix_stream_socket { read write getattr };
+allow vdc dumpstate:unix_stream_socket { read write getattr create_stream_socket_perms };
 
 # vdc information is written to shell owned bugreport files
 allow vdc shell_data_file:file { write getattr };
