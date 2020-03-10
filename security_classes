@@ -74,6 +74,8 @@ class netlink_selinux_socket
 class netlink_audit_socket
 class netlink_ip6fw_socket
 class netlink_dnrt_socket
+class netlink_netfilter_socket
+class netlink_generic_socket
 
 class dbus			# userspace
 class nscd			# userspace

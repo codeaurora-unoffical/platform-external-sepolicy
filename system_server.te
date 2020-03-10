@@ -69,6 +69,7 @@ allow system_server self:netlink_kobject_uevent_socket create_socket_perms;
 
 # Use generic netlink sockets.
 allow system_server self:netlink_socket create_socket_perms;
+allow system_server self:netlink_generic_socket create_socket_perms;
 
 # Set and get routes directly via netlink.
 allow system_server self:netlink_route_socket nlmsg_write;
@@ -365,6 +366,10 @@ allow system_server zygote:unix_dgram_socket write;
 
 # Read from log daemon.
 read_logd(system_server)
+
+# For configuring sdcardfs
+allow system_server configfs:dir { create_dir_perms };
+allow system_server configfs:file { getattr open unlink write };
 
 # Be consistent with DAC permissions. Allow system_server to write to
 # /sys/module/lowmemorykiller/parameters/adj
