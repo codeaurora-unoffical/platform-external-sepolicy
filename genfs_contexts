@@ -36,6 +36,8 @@ genfscon debugfs / u:object_r:debugfs:s0
 genfscon fuse / u:object_r:fuse:s0
 genfscon configfs / u:object_r:configfs:s0
 genfscon sdcardfs / u:object_r:sdcardfs:s0
+genfscon sysfs /class/android_usb                 u:object_r:sysfs_android_usb:s0
+genfscon sysfs /devices/virtual/android_usb     u:object_r:sysfs_android_usb:s0
 genfscon pstore / u:object_r:pstorefs:s0
 genfscon functionfs / u:object_r:functionfs:s0
 genfscon usbfs / u:object_r:usbfs:s0
