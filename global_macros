@@ -44,3 +44,6 @@ define(`rw_socket_perms', `{ ioctl read getattr write setattr lock append bind c
 define(`create_socket_perms', `{ create rw_socket_perms }')
 define(`rw_stream_socket_perms', `{ rw_socket_perms listen accept }')
 define(`create_stream_socket_perms', `{ create rw_stream_socket_perms }')
+
+define(`rw_socket_perms_no_ioctl', `{ read getattr write setattr lock append bind connect getopt setopt shutdown }')
+define(`create_socket_perms_no_ioctl', `{ create rw_socket_perms_no_ioctl }')

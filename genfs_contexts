@@ -40,3 +40,7 @@ genfscon pstore / u:object_r:pstorefs:s0
 genfscon functionfs / u:object_r:functionfs:s0
 genfscon usbfs / u:object_r:usbfs:s0
 genfscon binfmt_misc / u:object_r:binfmt_miscfs:s0
+
+genfscon sysfs /devices/system/cpu      u:object_r:sysfs_devices_system_cpu:s0
+genfscon sysfs /module/process_reclaim  u:object_r:sysfs_process_reclaim:s0
+genfscon sysfs /module/lowmemorykiller  u:object_r:sysfs_lowmemorykiller:s0
