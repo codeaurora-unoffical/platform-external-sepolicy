@@ -24,3 +24,4 @@ allow hostapd netd:netlink_nflog_socket { read write };
 allow hostapd netd:netlink_route_socket { read write };
 allow hostapd netd:unix_stream_socket { read write };
 allow hostapd netd:unix_dgram_socket { read write };
+allow hostapd self:netlink_generic_socket create_socket_perms_no_ioctl;
